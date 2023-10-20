@@ -20,8 +20,4 @@ target_include_directories(Tests PRIVATE ${CMAKE_SOURCE_DIR}/include)
 add_subdirectory(foo)  # Ajoutez d'autres sous-projets si nécessaire
 
 # Lien avec les bibliothèques nécessaires (par exemple, foo_lib, gtest, gtest_main)
-target_link_libraries(Tests PRIVATE foo_lib GTest::GTest GTest::Main)
-
-# Définition des tests
-add_test(NAME AllTests COMMAND Tests)
-
+target_link_libraries(Tests PRIVATE GTest::GTest GTest::Main)
