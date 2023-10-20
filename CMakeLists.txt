@@ -7,7 +7,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Lib extern
-find_package(ZLIB REQUIRED)
 find_package(GTest REQUIRED)
 
 # Active la prise en charge des tests
