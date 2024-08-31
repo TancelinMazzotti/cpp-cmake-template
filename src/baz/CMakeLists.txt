@@ -1,6 +1,7 @@
 # Liste des fichiers source spécifiques à baz
 set(BAZ_SOURCES
     Baz.cpp
+    Bazbis.cpp
     # Ajoutez d'autres fichiers source pour "baz" si nécessaire
 )
 

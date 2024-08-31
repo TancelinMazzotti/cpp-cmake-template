@@ -6,9 +6,6 @@ project(MonProjetCpp)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Active la prise en charge des tests
-enable_testing()
-
 # Inclusion des sous-projets
 add_subdirectory(src)
 add_subdirectory(tests)

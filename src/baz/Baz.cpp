@@ -10,3 +10,7 @@ void Baz::doSomethingWithFoo() {
     foo.doSomething();
 }
 
+
+int Baz::add(int a, int b) {
+    return a+b;
+}

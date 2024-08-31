@@ -5,6 +5,7 @@ class Bar {
 public:
     Bar();
     void doSomethingElse();
+    int add(int a, int b);
 };
 
 #endif

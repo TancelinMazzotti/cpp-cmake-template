@@ -7,6 +7,7 @@ class Baz {
 public:
     Baz();
     void doSomethingWithFoo();
+    int add(int a, int b);
 };
 
 #endif

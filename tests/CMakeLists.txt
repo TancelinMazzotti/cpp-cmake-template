@@ -4,6 +4,9 @@ cmake_minimum_required(VERSION 3.12)
 # Créez un sous-projet pour les tests
 project(Tests)
 
+# Active la prise en charge des tests
+enable_testing()
+
 # Liste des fichiers source spécifiques aux tests
 set(TEST_SOURCES
     main_test.cpp
@@ -14,7 +17,9 @@ set(TEST_SOURCES
 find_package(GTest REQUIRED)
 
 # Incluez les sous-projets (espaces de noms) pour les tests
-add_subdirectory(foo)  # Ajoutez d'autres sous-projets si nécessaire
+add_subdirectory(foo)  
+add_subdirectory(baz)
+# Ajoutez d'autres sous-projets si nécessaire
 
 # Créez l'exécutable de test
 add_executable(Tests ${TEST_SOURCES})
