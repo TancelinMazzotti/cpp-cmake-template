@@ -13,17 +13,17 @@ set(TEST_SOURCES
 # Lib extern
 find_package(GTest REQUIRED)
 
+# Incluez les sous-projets (espaces de noms) pour les tests
+add_subdirectory(foo)  # Ajoutez d'autres sous-projets si nécessaire
+
 # Créez l'exécutable de test
 add_executable(Tests ${TEST_SOURCES})
 
 # Incluez le dossier "include" du projet principal pour accéder aux fichiers d'en-tête
 target_include_directories(Tests PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
-# Incluez les sous-projets (espaces de noms) pour les tests
-add_subdirectory(foo)  # Ajoutez d'autres sous-projets si nécessaire
-
 # Lien avec les bibliothèques nécessaires (par exemple, foo_lib, gtest, gtest_main)
-target_link_libraries(Tests PRIVATE foo_lib gtest::gtest)
+target_link_libraries(Tests PRIVATE foo_lib GTest::gtest GTest::gtest_main)
 
 # Définition des tests
 add_test(NAME AllTests COMMAND Tests)

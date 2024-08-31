@@ -14,6 +14,6 @@ add_executable(FooTests ${TEST_SOURCES})
 target_include_directories(FooTests PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 # Lien avec les bibliothèques nécessaires (par exemple, foo_lib, gtest, gtest_main)
-target_link_libraries(FooTests PRIVATE foo_lib gtest::gtest)
+target_link_libraries(FooTests PRIVATE foo_lib GTest::gtest GTest::gtest_main)
 
-add_test(NAME FooTest COMMAND Tests)
+add_test(NAME FooTest COMMAND FooTests)
