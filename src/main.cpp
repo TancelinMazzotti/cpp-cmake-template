@@ -1,22 +1,19 @@
 #include <iostream>
+#include <chrono>
 
-#include "foo/Foo.hpp"
-#include "baz/Baz.hpp"
-#include "baz/Bazbis.hpp"
+#include "core/App.hpp"
 
 int main() {
-    Foo foo;
-    foo.doSomething();
-    foo.doSomethingWithBar();
-
-    Baz baz;
-    baz.doSomethingWithFoo();
-
-    Bazbis bazbis;
-    std::cout << "4 - 3 = " << bazbis.sub(4,3) << std::endl;
-
+    std::cout << "### START TEMPLATE ###" << std::endl;
+    const auto start{std::chrono::steady_clock::now()};
     
-    std::cout << "Programme principal!" << std::endl;
+    core::App app;
+    app.init();
+    app.run();
     
+    const auto end{std::chrono::steady_clock::now()};
+    const std::chrono::duration<double> elapsed_seconds{end - start};
+    std::cout << "Elapsed seconds: " << elapsed_seconds.count() << std::endl;
+    std::cout << "### END TEMPLATE ###" << std::endl;
     return 0;
 }

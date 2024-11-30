@@ -12,9 +12,9 @@ add_executable(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # Inclusion des sous-projets (espaces de noms)
+add_subdirectory(core)
 add_subdirectory(foo)
-add_subdirectory(baz)
 
 # Lien des bibliothèques avec le projet principal
+target_link_libraries(${PROJECT_NAME} PRIVATE core_lib)
 target_link_libraries(${PROJECT_NAME} PRIVATE foo_lib)
-target_link_libraries(${PROJECT_NAME} PRIVATE baz_lib)

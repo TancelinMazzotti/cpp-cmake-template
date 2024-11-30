@@ -1,6 +1,8 @@
 #include "foo/Foo.hpp"
 #include <iostream>
 
+namespace foo {
+
 Foo::Foo() {
     // Constructeur de la classe Foo
 }
@@ -10,10 +12,12 @@ void Foo::doSomething() {
 }
 
 void Foo::doSomethingWithBar() {
-    Bar bar;
+    bar::Bar bar;
     bar.doSomethingElse();
 }
 
 int Foo::add(int a, int b) {
     return a+b;
+}
+
 }

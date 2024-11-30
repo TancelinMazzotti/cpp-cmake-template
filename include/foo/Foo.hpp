@@ -3,6 +3,8 @@
 
 #include "foo/bar/Bar.hpp"
 
+namespace foo {
+
 class Foo {
 public:
     Foo();
@@ -10,5 +12,7 @@ public:
     void doSomethingWithBar();
     int add(int a, int b);
 };
+
+}
 
 #endif

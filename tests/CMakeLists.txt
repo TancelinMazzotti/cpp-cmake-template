@@ -17,8 +17,8 @@ set(TEST_SOURCES
 find_package(GTest REQUIRED)
 
 # Incluez les sous-projets (espaces de noms) pour les tests
+add_subdirectory(core)
 add_subdirectory(foo)  
-add_subdirectory(baz)
 # Ajoutez d'autres sous-projets si nécessaire
 
 # Créez l'exécutable de test
