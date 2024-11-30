@@ -1,11 +1,9 @@
-#include "foo/bar/Bar.hpp"
 #include <iostream>
+#include "foo/bar/Bar.hpp"
 
 namespace foo::bar {
 
-Bar::Bar() {
-    // Constructeur de la classe Bar
-}
+Bar::Bar() {}
 
 void Bar::doSomethingElse() {
     std::cout << "Je fais quelque chose d'autre dans Bar!" << std::endl;
