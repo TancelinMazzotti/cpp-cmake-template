@@ -1,6 +1,6 @@
 # C++ Project Template
 
-Ce projet sert de template pour vos projets C++ et inclut une configuration complète avec **CMake**, **Conan**, **Doxygen**, et **Google Test (GTest)**.  
+Ce projet sert de template pour vos projets C++ et inclut une configuration complète avec **CMake**, **Conan**, **Doxygen**, **Docker**, et **Google Test (GTest)**.  
 
 ## Structure du Projet
 
@@ -10,19 +10,22 @@ MonProjetCpp/
 ├── src/              # Code source principal
 ├── include/          # Fichiers d'en-tête
 ├── tests/            # Tests unitaires
+├── build/            # Répertoire de build
+├── docs/             # Documentation générée
 ├── CMakeLists.txt    # Fichier de configuration CMake
 ├── conanfile.txt     # Configuration des dépendances Conan
-├── build/            # Répertoire de build
-└── docs/             # Documentation générée
+├── Dockerfile        # Instructions pour générer une image Docker
+└── Doxyfile          # Configuration de Doxygen 
 ```
 
 ## Prérequis
 
 Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 - **Python 3** et **pip**
-- **Conan** (gestionnaire de dépendances)
-- **CMake** (générateur de projets)
-- **GNU Make** ou tout autre système de build compatible avec CMake  
+- **Conan** gestionnaire de dépendances
+- **CMake** générateur de projets
+- **GNU Make** ou tout autre système de build compatible avec CMake
+- **Docker** plateforme de conteneurisation
 
 ### Installation de Conan
 
